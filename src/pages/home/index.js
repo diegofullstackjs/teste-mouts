@@ -17,7 +17,7 @@ function HomePage() {
     }
   return(
     <>
-    <div className="container mx-auto">
+    <div className="container mx-auto ">
 <input className="mb-5 mt-5 p-5 w-full border border-gray-400" placeholder="Pesquise..."  onChange={handleChange}/>
     </div>
       <div className="container mx-auto grid grid-cols-3  gap-4 mt-5">
