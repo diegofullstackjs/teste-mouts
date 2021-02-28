@@ -18,18 +18,19 @@ function HomePage() {
   return(
     <>
     <div className="container mx-auto ">
-<input className="mb-5 mt-5 p-5 w-full border border-gray-400" placeholder="Pesquise..."  onChange={handleChange}/>
+        <input className="mb-5 mt-5 p-5 w-full border border-gray-400" placeholder="Pesquise..."  onChange={handleChange}/>
+    </div>
+    <div className="container mx-auto ">
+         {loading && <h1 className="text-xl font-bold">Carregando...</h1>}
     </div>
       <div className="container mx-auto grid grid-cols-3  gap-4 mt-5">
        
       {
           !loading&&
-          data.Country?.filter(v => {
+          data.Country?.filter((v) => {
               if(Input === ""){
                   return v
-              }else if(v.name.includes(Input)) {
-                  return v
-              }else {
+              }else if(v.name?.toLowerCase().includes(Input?.toLowerCase())) {
                   return v
               }
               
